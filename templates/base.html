@@ -11,12 +11,12 @@
         crossorigin="anonymous">
     </head>
     <body id='bod'{% block body_class %}{% endblock %}>
-        <ul class="nav nav-pills">
+        <ul class="nav">
             <li class="nav-item">
-              <a id='home' class="nav-link active" href="{% url 'index' %}">HOME</a>
+              <a id='home' class="nav-link" href="{% url 'index' %}">HOME</a>
             </li>
             <li class="nav-item">
-              <a id='connect' class="nav-link" href="{% url 'first:connect' %}">Connect 4</a>
+              <a id='connect' class="nav-link" href="{% url 'first:connect' %}">CONNECT 4!</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
