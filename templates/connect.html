@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+  <head>
+    {% block title %}Connect 4{% endblock %}
+  </head>
+  <body>
+    {% block body_block%}
+    <link rel="stylesheet" href="{% static "css/connect.css" %}"
+    <div class="container" align='center'>
+      <div class="jumbotron" align='center'>
+        <h1 id='name'>Connect Four!</h1>
+        <h6>Four in a row wins!!!!</h6>
+        <button id='b' class="btn btn-primary" type="button" name="start" href="#">START</button>
+      </div>
+      <table class='board' align='center'>
+        <tr>
+          <td name='six'><button id='one'type="button"></button></td>
+          <td name='six'><button id='two' type="button"></button></td>
+          <td name='six'><button id='three' type="button"></button></td>
+          <td id='four' name='six'><button type="button"></button></td>
+          <td id='five' name='six'><button type="button"></button></td>
+          <td id='six' name='six'><button type="button"></button></td>
+          <td id='seven' name='six'><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td id='one' name='five'><button type="button"></button></td>
+          <td id='two' name='five'><button type="button"></button></td>
+          <td id='three'name='five'><button type="button"></button></td>
+          <td id='four' name='five'><button type="button"></button></td>
+          <td id='five' name='five'><button type="button"></button></td>
+          <td id='six' name='five'><button type="button"></button></td>
+          <td id='seven' name='five'><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td id='one' name='four'><button type="button"></button></td>
+          <td id='two' name='four'><button type="button"></button></td>
+          <td id='three' name='four'><button type="button"></button></td>
+          <td id='four' name='four'><button type="button"></button></td>
+          <td id='five' name='four'><button type="button"></button></td>
+          <td id='six' name='four'><button type="button"></button></td>
+          <td id='seven' name='four'><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td id='one' name='five'><button type="button"></button></td>
+          <td id='two'><button type="button"></button></td>
+          <td id='three'><button type="button"></button></td>
+          <td id='four'><button type="button"></button></td>
+          <td id='five'><button type="button"></button></td>
+          <td id='six'><button type="button"></button></td>
+          <td id='seven'><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td id='one' name='five'><button type="button"></button></td>
+          <td id='two'><button type="button"></button></td>
+          <td id='three'><button type="button"></button></td>
+          <td id='four'><button type="button"></button></td>
+          <td id='five'><button type="button"></button></td>
+          <td id='six'><button type="button"></button></td>
+          <td id='seven'><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td id='one' name='five'><button type="button"></button></td>
+          <td id='two'><button type="button"></button></td>
+          <td id='three'><button type="button"></button></td>
+          <td id='four'><button type="button"></button></td>
+          <td id='five'><button type="button"></button></td>
+          <td id='six'><button type="button"></button></td>
+          <td id='seven'><button type="button"></button></td>
+        </tr>
+      </table>
+      <br><br>
+      <h5 align='center'>HTML, CSS, Javascript, JQuery</h5>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+    <script src='{% static "js/connect.js" %}'></script>
+    {% endblock %}
+  </body>
+</html>

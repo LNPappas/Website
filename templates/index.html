@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+        {% block title %}Lauren Pappas{% endblock %}
+    </head>
+    <body>
+        {% block body_block%}
+        <link rel="stylesheet" href="{% static "css/index.css" %}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+            
+        <br><div align='center' class="container" id="d1">
+            <div class="jumbotron" id='jumbo'>
+                <h1 id='name'>LAUREN PAPPAS</h1>
+                <h3 id="job">SOFTWARE ENGINEER</h3>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>

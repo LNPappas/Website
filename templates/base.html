@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static "css/base.css" %}">
+        <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+    </head>
+    <body id='bod'{% block body_class %}{% endblock %}>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a id='home' class="nav-link active" href="{% url 'index' %}">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a id='connect' class="nav-link" href="{% url 'first:connect' %}">Connect 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        <div class="container">
+            {% block body_block %}
+            <!-- Anything outside this block will be inherited. -->
+            {% endblock %}
+        </div>
+    </body>
+</html>

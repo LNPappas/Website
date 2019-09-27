@@ -1,0 +1,21 @@
+#jumbo{
+    background-color: rgb(40, 46, 48);
+    margin-inline-start: 100px;
+    margin-inline-end: 100px;
+    margin-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#name{
+    font-family: 'Roboto', sans-serif;
+    color: #0091ff;
+    font-size: 4em;
+    text-shadow: 5px 5px 2px #0d0f0f;
+}
+#job{
+    font-family: 'Roboto', sans-serif;
+    color: #47e7ff;
+    font-size: 2em;
+    text-shadow: 3px 2px 2px #0d0f0f;
+
+}
