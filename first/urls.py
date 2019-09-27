@@ -6,4 +6,5 @@ app_name = 'first'
 urlpatterns = [
     path('', views.index, name='index'),
     path('connect/', views.connect, name='connect'),
+    path('resume/', views.resume, name='resume'),
 ]

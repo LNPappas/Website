@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+        {% block title %}RESUME{% endblock %}
+    </head>
+    <body>
+        {% block body_block%}
+        <link rel="stylesheet" href="{% static "css/resume.css" %}">
+        <div align='center'>
+            <embed id='d' align='center'src="{% static "images/LP_Resume.pdf" %}"/>
+        </div>
+        {% endblock %}
+    </body>
+</html>

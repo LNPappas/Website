@@ -6,3 +6,6 @@ def index(request):
 
 def connect(request):
     return render(request, 'connect.html')
+
+def resume(request):
+    return render(request, 'resume.html')
