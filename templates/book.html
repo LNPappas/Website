@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+        {% block title %}Guest Book{% endblock %}
+    </head>
+    <body>
+        {% block body_block%}
+        <link rel="stylesheet" href="{% static "css/book.css" %}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <div align='center'>
+
+            <br><br>
+            <a id='sign' align='center' href="{% url 'first:guest' %}">SIGN GUEST BOOK</a>
+            <br><br><br>
+
+            {% if user %}
+                <table id='users'>
+                    <thead id='head'>
+                            <th> FIRST NAME: </th>
+                            <th> LAST NAME: </th>
+                            <th> COMPANY: </th>
+                            <th> EMAIL: </th>
+                    </thead>
+                    
+                    {% for person in user %}
+
+                    <tr id='tr'>
+                        <td id='first'> {{ person.first }} </td>
+                        <td id='last'> {{ person.last }} </td>
+                        <td id='comp'> {{ person.company }} </td>
+                        <td id='email'> {{ person.email }} </td>
+                    </tr>
+
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p> NO USERS FOUND </p>
+            {% endif %}
+            <h5 id='language' align='center'>HTML, CSS, Python, Django, SQLite</h5>
+        </div>
+        {% endblock %}
+    </body>
+</html>

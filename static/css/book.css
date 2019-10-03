@@ -1,0 +1,31 @@
+#sign{
+    border: 2px solid #0091ff;
+    border-radius: 3%;
+    color: #47e7ff;
+    background-color: #47494d;
+    padding: 10px;
+}
+table, th, td{
+    padding: 10px;
+    border: 2px solid #0091ff;
+    background-color: #2b2c2e
+}
+#head{
+    color: #de5050;
+}
+td{
+    color: #47e7ff;
+}
+#book{
+    border: 2px solid #0091ff;
+    border-radius: 5%;
+    color: #47e7ff;
+    background-color: #47494d;
+    margin-left: 10px;
+
+}
+#language{
+    color: #de5050;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
