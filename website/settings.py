@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMP_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +28,7 @@ SECRET_KEY = 'aqbgu8r)9@++dl74arh+z5i&z9wg(k%!uakm$f%y^7(v-3$wj('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-env.tkwgfg9mtn.us-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['lnpappas.pythonanywhere.com']
 
 
 # Application definition
@@ -124,4 +125,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
+    STATIC_ROOT,
 ]
