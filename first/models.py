@@ -9,4 +9,3 @@ class SignForm(models.Model):
 
     def __str__(self):
         return self.first + " " + self.last
-    

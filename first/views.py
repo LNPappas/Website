@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from first import models, forms
 from first.models import SignForm
-from first.forms import SignUp
-
+from first.forms import SignUp, MovieForm
 
 # Create your views here.
 def index(request):
@@ -22,7 +21,7 @@ def guest(request):
 
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            return user(request)
         else:
             print("ERROR! FORM INVALID")
 
@@ -31,3 +30,22 @@ def guest(request):
 def user(request):
     user_list = SignForm.objects.order_by('last')
     return render(request, 'book.html', {'user': user_list})
+
+def movie(request):
+    mform = MovieForm()
+
+    if request.method == "POST":
+        mform = MovieForm(request.POST)
+
+        if mform.is_valid():
+            return search(request, mform)
+        else:
+            print("ERROR! FORM INVALID")
+
+    return render(request, "movie.html", {'movie_form': mform})
+
+def search(request, mform):
+    return render(request, 'search.html', {'movie': mform})
+    
+
+

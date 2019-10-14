@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+        {% block title %}Movie Search{% endblock %}
+    </head>
+    <body>
+        {% block body_block%}
+        <link rel="stylesheet" href="{% static "css/movie.css" %}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        
+
+        <div  id='d' align='center' class="container">
+            <div id='jumbo' class="jumbotron">
+                <br><h1 align="center">Search for a Movie:</h1><br>
+                <form id='f' method="POST">
+                    {{ movie_form.as_p }}
+                    {% csrf_token %}
+                    <br><input id='sub' type="submit" class="btn btn-primary" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>

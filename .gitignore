@@ -1,0 +1,7 @@
+first/__pycache__/views.cpython-37.pyc
+first/__pycache__/admin.cpython-37.pyc
+first/__pycache__/forms.cpython-37.pyc
+first/__pycache__/models.cpython-37.pyc
+first/__pycache__/urls.cpython-37.pyc
+db.sqlite3
+api.py
