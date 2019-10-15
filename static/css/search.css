@@ -1,0 +1,16 @@
+#container {
+    width: 100%;
+    background-color: black;
+    display: inline-block;
+  }
+  .block {
+    height: 140px;
+    width: 100px;
+    background-color: #fff;
+    margin: 10px;
+    float: left;
+  }
+#poster{
+    width: 100px;
+    height: 140px;
+}

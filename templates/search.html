@@ -7,15 +7,26 @@
     </head>
     <body>
         {% block body_block%}
-        <link rel="stylesheet" href="{% static "css/movie.css" %}">
+        <link rel="stylesheet" href="{% static "css/search.css" %}">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         
 
         <div  id='d' align='center' class="container">
             <div id='jumbo' class="jumbotron">
                 <br><h1 align="center">Search Results:</h1><br>
-                {{ movie.as_p }}
             </div>
+
+                {% if movie %}
+                    <div id='container'>
+                        {% for element in movie %}
+                        <div class='block'>
+                            <img id='poster' class="rounded mx-auto d-block" src="{{ element.Poster }}" alt="None">{{element.Title}} {{element.Year}}</img>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p> NO MOVIES FOUND </p>
+                {% endif %}
         </div>
         {% endblock %}
     </body>

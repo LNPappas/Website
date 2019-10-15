@@ -2,6 +2,7 @@ from django.shortcuts import render
 from first import models, forms
 from first.models import SignForm
 from first.forms import SignUp, MovieForm
+from first.api import Imdb
 
 # Create your views here.
 def index(request):
@@ -45,7 +46,9 @@ def movie(request):
     return render(request, "movie.html", {'movie_form': mform})
 
 def search(request, mform):
-    return render(request, 'search.html', {'movie': mform})
+    movie_list = Imdb()
+    search = movie_list.query('Super Troopers')
+    return render(request, 'search.html', {'movie': search['Search']})
     
 
 
