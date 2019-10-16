@@ -11,4 +11,5 @@ urlpatterns = [
     path('book/', views.user, name='book'),
     path('movie/', views.movie, name='movie'),
     path('search/', views.search, name='search'),
+    path('error/', views.search, name='error'),
 ]

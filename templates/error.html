@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+        {% block title %}Search Results{% endblock %}
+    </head>
+    <body>
+        {% block body_block%}
+        <link rel="stylesheet" href="{% static "css/search.css" %}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        
+
+        <div  id='d' align='center' class="container">
+            <div id='jumbo' class="container">
+                <br><h1 align="center">Error: {{movie.Error}}</h1><br>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>

@@ -39,7 +39,8 @@ def movie(request):
         mform = MovieForm(request.POST)
 
         if mform.is_valid():
-            return search(request, mform)
+            temp = mform.cleaned_data['title']
+            return search(request, temp)
         else:
             print("ERROR! FORM INVALID")
 
@@ -47,8 +48,11 @@ def movie(request):
 
 def search(request, mform):
     movie_list = Imdb()
-    search = movie_list.query('Super Troopers')
-    return render(request, 'search.html', {'movie': search['Search']})
+    search = movie_list.query(mform)
+    if search['Response'] == 'True':
+        return render(request, 'search.html', {'movie': search['Search']})
+    else:
+        return render(request, 'error.html', {'movie': search})
     
 
 

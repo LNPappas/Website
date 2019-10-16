@@ -1,0 +1,20 @@
+#jumbo{
+    background-color: #313438;
+    margin-inline-start: 100px;
+    margin-inline-end: 100px;
+    margin-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #de5050;
+}
+#sub{
+    border: 2px solid #0091ff;
+    border-radius: 5%;
+    color: #47e7ff;
+    background-color: #47494d;
+    margin-left: 10px;
+}
+#f{
+    color: #47e7ff;
+    font-size: 20px;
+}

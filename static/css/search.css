@@ -1,16 +1,41 @@
 #container {
-    width: 100%;
-    background-color: black;
     display: inline-block;
+    height: fit-content;
+    align-items: center;
+    margin: auto;
   }
   .block {
-    height: 140px;
-    width: 100px;
-    background-color: #fff;
-    margin: 10px;
+    align-items: center;
     float: left;
+    width: 240px;
+    height: 500px;
+    margin: auto;
+    margin-right: 30px;
+    margin-block: 30px;
   }
 #poster{
-    width: 100px;
-    height: 140px;
+    width: 200px;
+    height: 320px;
 }
+#title{
+  color: #0091ff;;
+  font-size: 20px;
+  width: 120px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+#year{
+  color:  #47e7ff;
+  margin-top: 5px;
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+#jumbo{
+  background-color: rgb(40, 46, 48);
+  margin: 30px, auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #de5050;
+}
+

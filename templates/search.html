@@ -12,15 +12,21 @@
         
 
         <div  id='d' align='center' class="container">
-            <div id='jumbo' class="jumbotron">
+            <div id='jumbo' class="container">
                 <br><h1 align="center">Search Results:</h1><br>
             </div>
 
                 {% if movie %}
-                    <div id='container'>
+                    <div id='container' align='center'>
                         {% for element in movie %}
                         <div class='block'>
-                            <img id='poster' class="rounded mx-auto d-block" src="{{ element.Poster }}" alt="None">{{element.Title}} {{element.Year}}</img>
+                            {% if "N/A" in element.Poster %}
+                                <img id='poster' class="rounded mx-auto d-block" src="{% static 'images/no.jpg' %}" alt="N/A"></img>
+                            {% else %}
+                                <img id='poster' class="rounded mx-auto d-block" src="{{ element.Poster }}" alt=""></img>
+                            {% endif %}
+                            <p id="year">{{element.Year}}</p>
+                            <p id="title">{{element.Title}}</p> 
                         </div>
                         {% endfor %}
                     </div>
