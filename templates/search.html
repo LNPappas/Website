@@ -9,7 +9,7 @@
         {% block body_block%}
         <link rel="stylesheet" href="{% static "css/search.css" %}">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        
+        <script src='{% static "js/search.js" %}'></script>
 
         <div  id='d' align='center' class="container">
             <div id='jumbo' class="container">
@@ -21,9 +21,9 @@
                         {% for element in movie %}
                         <div class='block'>
                             {% if "N/A" in element.Poster %}
-                                <img id='poster' class="rounded mx-auto d-block" src="{% static 'images/no.jpg' %}" alt="N/A"></img>
+                                <img class='poster' id='poster' class="rounded mx-auto d-block" src="{% static 'images/no.jpg' %}" alt="N/A"></img>
                             {% else %}
-                                <img id='poster' class="rounded mx-auto d-block" src="{{ element.Poster }}" alt=""></img>
+                                <img class='poster' id='poster' class="rounded mx-auto d-block" src="{{ element.Poster }}" alt=""></img>
                             {% endif %}
                             <p id="year">{{element.Year}}</p>
                             <p id="title">{{element.Title}}</p> 

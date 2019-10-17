@@ -1,0 +1,3 @@
+poster.on('click', function(){
+
+}
