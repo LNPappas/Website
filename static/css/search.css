@@ -1,22 +1,25 @@
 #container {
-    display: inline-block;
-    height: fit-content;
-    align-items: center;
-    margin: auto;
-  }
-  .block {
-    align-items: center;
-    float: left;
-    width: 240px;
-    height: 500px;
-    margin: auto;
-    margin-right: 30px;
-    margin-block: 30px;
-  }
-#poster{
-    width: 200px;
-    height: 320px;
+  display: flex;
+  flex-flow: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  scroll-margin-inline: 4;
 }
+
+.block {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+
+.block img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 200px;
+  height: 320px;
+}
+
 #title{
   color: #0091ff;;
   font-size: 20px;
