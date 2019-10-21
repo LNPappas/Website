@@ -4,35 +4,44 @@
     <head>
         <meta charset="utf-8">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{% static "css/basic.css" %}">
-        <link rel="stylesheet" 
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-        crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static "css/base.css" %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="icon" href="{% static "images/me.png"%}">
     </head>
     <body id='bod'>
-        <ul class="nav" id='myTab' role='tablist'>
-            <li class="nav-item">
-              <a id='home' class="nav-link" data-toggle="tab" href="{% url 'index' %}">HOME</a>
-            </li>
-            <li class="nav-item">
-                <a id='resume' class="nav-link" data-toggle="tab" href="{% url 'first:resume' %}">RESUME</a>
-            </li>
-            <li class="nav-item">
-              <a id='connect' class="nav-link" data-toggle="tab" href="{% url 'first:connect' %}">CONNECT 4!</a>
-            </li>
-            <li class="nav-item">
-                <a id='book' class="nav-link" href="{% url 'first:book' %}">GUEST BOOK</a>
-            </li>
-            <li class="nav-item">
-                <a id='movie' class="nav-link" data-toggle="tab" href="{% url 'first:movie' %}">MOVIE TRAILERS</a>
-            </li>
-          </ul>
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">                
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>           
+                    <a id='home' class="navbar-brand" href="{% url 'index' %}">HOME</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a id='resume' class="nav-link" href="{% url 'first:resume' %}">RESUME</a></li>
+                        <li class="dropdown" id='menu'>
+                            <a id='drop' href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECTS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">                
+                                <li class="nav-item"><a id='connect' class="nav-link" href="{% url 'first:connect' %}">CONNECT 4!</a></li>
+                                <li class="nav-item"><a id='book' class="nav-link" href="{% url 'first:book' %}">GUEST BOOK</a></li>
+                                <li class="nav-item"><a id='movie' class="nav-link" href="{% url 'first:movie' %}">MOVIE TRAILERS</a></li>
+                            </ul>
+                        </li>
+                    </ul>          
+                </div>
+            </div>
+        </nav>
+
         <div class="container">
             {% block body_block %}
-            <!-- Anything outside this block will be inherited. -->
+
             {% endblock %}
         </div>
+        <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>      
     </body>
 </html>

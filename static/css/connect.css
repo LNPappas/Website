@@ -29,7 +29,6 @@
   }
   #name{
     color: #0091ff;
-    font-size: 4em;
   }
   h6{
     font-size: 1.5em;
@@ -41,9 +40,8 @@
     margin-bottom: 50px;
   }
   #connect{
-    border: 2px solid #0091ff;
-    border-radius: 5%;
-    color: #47e7ff;
-    background-color: #47494d;
-    margin-left: 10px;
+    color: #de5050;
+}
+#drop{
+  color: #47e7ff;
 }

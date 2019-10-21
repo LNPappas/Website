@@ -13,7 +13,7 @@
 
         <div  id='d' align='center' class="container">
             <div id='jumbo' class="jumbotron">
-                <br><h1 align="center">Sign Guest Book:</h1><br>
+                <br><h1 id='s' align="center">Sign Guest Book:</h1><br>
                 <form id='f' method="POST">
                     {{ sign_form.as_p }}
                     {% csrf_token %}
