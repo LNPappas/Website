@@ -13,8 +13,8 @@ document.addEventListener('click', function(e) {
             "x-rapidapi-key": "80d1b10cb0mshe34b0eb53cf0a02p1fed07jsn893bd88913f3"
         }
     })
-    .then(response => response.document())
-    .then(contents => console.log(200))
+    // .then(response => response.document())
+    .then(contents => console.log(id))
     .catch(err => {
         console.log(err);
     });
