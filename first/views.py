@@ -54,5 +54,6 @@ def search(request, mform):
     else:
         return render(request, 'error.html', {'movie': search})
     
-
+def blog(request):
+    return render(request, 'blog.html')
 
