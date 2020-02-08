@@ -56,5 +56,8 @@ def search(request, mform):
     
 def blog(request):
     articles = Article.objects.all().order_by('-date')
-    return render(request, 'blog.html', {'artical' : articles})
+    return render(request, 'blog.html', {'article' : articles})
 
+def blog_detail(request, slug):
+    article = Article.objects.get(slug=slug)
+    return render(request, 'blog/blog_detail.html', {'article': article})

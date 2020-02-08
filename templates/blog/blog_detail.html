@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+        {% block title %}{{article.title}}{% endblock %}
+    </head>
+    <body>
+        {% block body_block%}
+        <link rel="stylesheet" href="{% static "css/blog_detail.css" %}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"><br>
+            
+        <br><div align='center' class="container" id="d1">
+            <div align='cenert' class="container" id="art">
+                <h2 id='title'>{{ article.title }}</a></h2>
+                <p align='left' id='snip'>{{ article.body }}</p>
+                <p align='right' id='date'>{{ article.date }}</p>
+            </div><br>
+        </div>
+        {% endblock %}
+    </body>
+</html>

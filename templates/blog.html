@@ -11,9 +11,9 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"><br>
             
         <br><div align='center' class="container" id="d1">
-                {% for art in artical %}
+                {% for art in article %}
                 <div align='center' class="container" id="art">
-                        <h2 id='title'><a href="">{{ art.title }}</a></h2>
+                        <h2 id='title'><a href="{% url 'first:blog_detail' slug=art.slug %}">{{ art.title }}</a></h2>
                         <p id='snip'>{{ art.snippet }}</p>
                         <p id='date'>{{ art.date }}</p>
                 </div><br>
