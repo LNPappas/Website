@@ -8,10 +8,16 @@
     <body>
         {% block body_block%}
         <link rel="stylesheet" href="{% static "css/blog.css" %}">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"><br>
             
         <br><div align='center' class="container" id="d1">
-                
+                {% for art in artical %}
+                <div align='center' class="container" id="art">
+                        <h2 id='title'><a href="">{{ art.title }}</a></h2>
+                        <p id='snip'>{{ art.snippet }}</p>
+                        <p id='date'>{{ art.date }}</p>
+                </div><br>
+                {% endfor %}
         </div>
         {% endblock %}
     </body>

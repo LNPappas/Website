@@ -2,3 +2,28 @@
     color: #47e7ff;
     margin-left: 10px;
 }
+#snip{
+    color: #de5050;
+}
+#date{
+    color: #47e7ff;
+}
+#art{
+    background-color: #313438;
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
+    padding-bottom: 25px;
+    max-width: 600px;
+}
+#d1{
+    /* background-color: #313438; */
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
+    margin-top: 75px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    max-width: 1000px;
+}
+body{
+    background-color: #282e30;
+}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from first import models, forms
-from first.models import SignForm
+from first.models import SignForm, Article
 from first.forms import SignUp, MovieForm
 from first.api import Imdb
 
@@ -55,5 +55,6 @@ def search(request, mform):
         return render(request, 'error.html', {'movie': search})
     
 def blog(request):
-    return render(request, 'blog.html')
+    articles = Article.objects.all().order_by('-date')
+    return render(request, 'blog.html', {'artical' : articles})
 
